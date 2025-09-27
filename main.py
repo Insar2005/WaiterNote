@@ -14,6 +14,7 @@ import requests as rq
 async def lifespan(app:FastAPI):
     await init_db()
     print('Bot is ready')
+    yield
 
 
 
