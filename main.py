@@ -30,7 +30,9 @@ app = FastAPI(title='To Do App', lifespan=lifespan)
 # Кибербезопасность
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["https://waiternote.web.app"], 
+    allow_origins = ["https://waiternote.web.app",
+        "http://localhost:3000",  # для разработки
+        "http://127.0.0.1:3000", ], 
     allow_credentials = True,
     allow_methods = ["*"],
     allow_headers=["*"],
